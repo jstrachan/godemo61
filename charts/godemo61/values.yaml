@@ -4,7 +4,7 @@
 replicaCount: 1
 image:
   repository: docker-registry:80/myproject/godemo61
-  tag: 0.0.49
+  tag: 0.0.50
   pullPolicy: IfNotPresent
 
 # define environment variables here as a map of key: value
