@@ -1,0 +1,32 @@
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-z7vb7-6[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-48hmd[0m
+{"level":"info","ts":1597572040.876343,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1597572040.8792005,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-z7vb7-6[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-6j9zv[0m
+{"level":"info","ts":1597572041.355244,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1597572041.3587415,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-z7vb7-6[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-z7vb7-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jstrachan-godemo61-master-relea-z7vb7-425fg[0m
+{"level":"info","ts":1597572075.4030375,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1597572078.4133008,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/godemo61.git @ v0.0.24 in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-z7vb7-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:0682c47aa1f2ac0c234b2cbf48e22667482a8b45
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-z7vb7-6[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/**r-versions.git with ref refs/heads/master to /home/.**/jenkins-x-versions
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-z7vb7-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/godemo61 main.go
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-z7vb7-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0816 10:01:36.638238      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+error checking push permissions -- make sure you entered the correct tag name, and that you are authenticated correctly, and try again: checking push permission for "docker-registry:5000/myproject/godemo61:0.0.24": creating push check transport for docker-registry:5000 failed: Get "http://docker-registry:5000/v2/": dial tcp 10.107.115.36:5000: i/o timeout
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
