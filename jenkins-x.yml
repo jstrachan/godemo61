@@ -4,7 +4,7 @@ pipelineConfig:
     overrides:
       - name: container-build
         step: 
-          sh: /kaniko/executor --skip-tls-verify-registry --insecure --cache=true --cache-dir=/workspace --context=/workspace/source --dockerfile=/workspace/source/Dockerfile --destination=$DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/$APP_NAME:$VERSION --cache-repo=$DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/cache
+          sh: /kaniko/executor --skip-tls-verify --skip-tls-verify-registry --insecure --cache=true --cache-dir=/workspace --context=/workspace/source --dockerfile=/workspace/source/Dockerfile --destination=$DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/$APP_NAME:$VERSION --cache-repo=$DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/cache
           image: gcr.io/kaniko-project/executor
           env:
           - name: NO_GOOGLE_APPLICATION_CREDENTIALS
