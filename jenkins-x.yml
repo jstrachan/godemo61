@@ -4,7 +4,7 @@ pipelineConfig:
     overrides:
       - name: container-build
         step: 
-          sh: docker build --dockerfile=/workspace/source/Dockerfile --tag $DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/$APP_NAME:$VERSION
+          sh: docker build -f /workspace/source/Dockerfile --tag $DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/$APP_NAME:$VERSION
           image: docker:stable
           #sh: /kaniko/executor --skip-tls-verify --insecure --cache=true --cache-dir=/workspace --context=/workspace/source --dockerfile=/workspace/source/Dockerfile --destination=$DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/$APP_NAME:$VERSION --cache-repo=$DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/cache
           #sh: /kaniko/executor --skip-tls-verify --insecure --insecure-registry=docker-registry --skip-tls-verify-registry=docker-registry --cache=true --cache-dir=/workspace --context=/workspace/source --dockerfile=/workspace/source/Dockerfile --destination=$DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/$APP_NAME:$VERSION --cache-repo=$DOCKER_REGISTRY/$DOCKER_REGISTRY_ORG/cache
