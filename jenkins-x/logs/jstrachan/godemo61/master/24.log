@@ -1,0 +1,32 @@
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-mw5hw-24[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-h9ttx[0m
+{"level":"info","ts":1597661308.2635894,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1597661308.2660608,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-mw5hw-24[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-wwbp5[0m
+{"level":"info","ts":1597661309.2112617,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1597661309.2157376,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-mw5hw-24[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-mw5hw-24[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jstrachan-godemo61-master-relea-mw5hw-xsgmg[0m
+{"level":"info","ts":1597661315.2814412,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1597661316.525727,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*********/godemo61.git @ v0.0.88 in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-mw5hw-24[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-mw5hw-24[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:a13b6e8673ac3f8d93832242876db86a9b6c0402
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-mw5hw-24[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-mw5hw-24[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/godemo61 main.go
+
+Showing logs for build [32mjstrachan-godemo61-master-relea-mw5hw-24[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+time="2020-08-17T10:48:43Z" level=error msg="failed to dial gRPC: cannot connect to the Docker daemon. Is 'docker daemon' running on this host?: dial unix /var/run/docker.sock: connect: no such file or directory"
+error during connect: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.40/build?buildargs=%7B%7D&cachefrom=%5B%5D&cgroupparent=&cpuperiod=0&cpuquota=0&cpusetcpus=&cpusetmems=&cpushares=0&dockerfile=Dockerfile&labels=%7B%7D&memory=0&memswap=0&networkmode=default&rm=1&session=vrqamskup1ajym6cjp5lzk8t1&shmsize=0&t=docker-registry-**.127.0.0.1.xip.io%2Fmyproject%2Fgodemo61%3A0.0.88&target=&ulimits=null&version=1: context canceled
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
