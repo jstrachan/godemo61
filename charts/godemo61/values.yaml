@@ -4,7 +4,7 @@
 replicaCount: 1
 image:
   repository: 10.107.115.36/myproject/godemo61
-  tag: 0.0.75
+  tag: 0.0.76
   pullPolicy: IfNotPresent
 
 # define environment variables here as a map of key: value
